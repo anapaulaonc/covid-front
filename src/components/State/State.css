@@ -1,0 +1,25 @@
+.State {
+    display: flex;
+    flex-wrap: wrap;
+}
+.state-information {
+    display: flex;
+    flex-direction: column;
+    border: 1px ;
+    background-color: rgb(252, 233, 233);
+    border-radius: 5px;
+    margin: 2%;
+    padding: 2%;
+    width: 20vw;
+    height: 42vh;
+
+  }
+  
+.state-information p {
+    font-size: .78rem;
+    font-weight: 400;
+    line-height: 0.7rem;
+    display: flex;
+    text-align: right;
+    
+  }
