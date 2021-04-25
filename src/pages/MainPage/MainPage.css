@@ -14,19 +14,19 @@
   }
   
   .MainPage-header {
-    background-color: #da4343;
+    background-color: #4366da;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: #da4343;
+    color: #4366da;
   }
   h1 {
     padding: .66rem 0;
     text-align: center;
-    background-color: #da4343;
+    background-color: #4366da;
     font-family: 'Roboto';
     font-size: 1.8rem;
     color: #fff;

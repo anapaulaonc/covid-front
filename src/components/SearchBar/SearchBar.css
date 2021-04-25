@@ -4,6 +4,7 @@
   background-image: url('./background_search_desktop.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 50px 4px;
   height: 25rem;
 }
 
@@ -12,12 +13,34 @@
   height: "20px";
 }
 
+.Search-informations{
+  flex-direction:unset;
+}
+
+.Search-information {
+  border: 1px ;
+  background-color: rgba(103, 237, 255, 0.548);
+  border-radius: 5px;
+  margin: 0.3%;
+  padding: 0.2%;
+  height: 6vh;
+  max-width: max-content;
+}
+
+.Search-information p {
+  font-size: .78rem;
+  font-weight: 400;
+  line-height: 0.7rem;
+  display: flex;
+  text-align: right;
+  
+}
 
 
 .SearchBar-sort-options li.active,
 .SearchBar-sort-options li.active:hover {
   border-bottom: 1px solid #f0c36c;
-  color: #da4343;
+  color: #43aec9;
 }
 
 .SearchBar-fields {
@@ -45,7 +68,7 @@
 .SearchBar-submit a {
   border-radius: 4px;
   padding: .72rem 1.7rem;
-  background-color: #da4343;
+  background-color: #4366dad2;
   color: #ffffff;
   font-weight: 600;
   transition: background-color .5s;
@@ -53,5 +76,5 @@
 
 .SearchBar-submit a:hover {
   cursor: pointer;
-  background-color: #b34c4c;
+  background-color: #3552b3d2;
 }

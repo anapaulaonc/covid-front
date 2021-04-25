@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {useParams, useHistory} from 'react-router-dom';
 import axios from 'axios';
 import './SearchBar.css';
 
@@ -8,6 +9,8 @@ const SearchBar = () =>{
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState('');
   const [filteredStates, setFilteredStates] = useState([]);
+
+  let history = useHistory() 
 
   useEffect(() => {
     setLoading(true);
@@ -27,7 +30,7 @@ const SearchBar = () =>{
   useEffect(() => {
     setFilteredStates(
       states.filter((state) =>
-        state.name.toLowerCase().includes(lowerSearch)
+        state.name.toLowerCase().includes(search.toLocaleLowerCase())
       )
     );
   }, [search, states]);
@@ -41,12 +44,14 @@ const SearchBar = () =>{
         
         <div className="SearchBar-fields">
           <input className="" placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)} />
-          <ul>            
+          <ul className="Search-informations">            
           {(filteredStates.map( (state) =>{     
-                        return (
-                          <div className="option">{state.name} </div>
-                        )                                  
-                    })             
+                  return (
+                    <div className="Search-information" key={state.id}>
+                      <div className="option" onClick={() => history.push(`/charts/${state.id}`) }>{state.name}</div>
+                    </div>
+                  )                                  
+              })             
           )}
           </ul>
         </div>
