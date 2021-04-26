@@ -1,11 +1,16 @@
-.SearchBar {
-  display: flex;
-  justify-content: center;
+.container{
   background-image: url('./background_search_desktop.jpg');
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.384);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 50px 4px;
   height: 25rem;
+}
+.SearchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .option{
@@ -18,22 +23,29 @@
 }
 
 .Search-information {
-  border: 1px ;
-  background-color: rgba(103, 237, 255, 0.548);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(103, 237, 255, 0.705);
   border-radius: 5px;
   margin: 0.3%;
-  padding: 0.2%;
-  height: 6vh;
-  max-width: max-content;
+  padding: 0.2rem 0.5rem ;
+  height: 2rem;
+  width: fit-content;
+  color: #fff;
 }
 
-.Search-information p {
+.Search-information span {
   font-size: .78rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 0.7rem;
   display: flex;
   text-align: right;
   
+}
+
+.Search-information :hover{
+  cursor:pointer;
 }
 
 
@@ -45,7 +57,6 @@
 
 .SearchBar-fields {
   justify-content: center;
-  margin-bottom: 2.88rem;
 }
 
 .SearchBar-fields input {
@@ -72,9 +83,17 @@
   color: #ffffff;
   font-weight: 600;
   transition: background-color .5s;
+  margin-left: 0.5rem;
 }
 
 .SearchBar-submit a:hover {
   cursor: pointer;
   background-color: #3552b3d2;
+}
+
+.Container-informations{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1.5rem 3rem;
 }

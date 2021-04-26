@@ -1,8 +1,8 @@
 import React from 'react';
 import './MainPage.css';
 
-import StateList from '../../components/StateList';
 import SearchBar from '../../components/SearchBar';
+import Table from '../../components/Table/Table';
 
 class MainPage extends React.Component {
   render() {
@@ -10,7 +10,7 @@ class MainPage extends React.Component {
       <div className="MainPage">
         <h1>COVID 19</h1>
         <SearchBar />
-        <StateList /> 
+        <Table/>
       </div>
     );
   }

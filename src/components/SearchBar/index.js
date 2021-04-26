@@ -40,25 +40,27 @@ const SearchBar = () =>{
   }
 
     return (
-      <div className="SearchBar">
-        
-        <div className="SearchBar-fields">
-          <input className="" placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)} />
-          <ul className="Search-informations">            
-          {(filteredStates.map( (state) =>{     
-                  return (
-                    <div className="Search-information" key={state.id}>
-                      <div className="option" onClick={() => history.push(`/charts/${state.id}`) }>{state.name}</div>
-                    </div>
-                  )                                  
-              })             
-          )}
-          </ul>
-        </div>
-        <div className="SearchBar-submit">
-          <a>Pesquisar</a>
-        </div>
+      <div className="container">
+        <div className="SearchBar">
+          
+          <div className="SearchBar-fields">
+            <input className="" placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)} />          
+          </div>
+          <div className="SearchBar-submit">
+            <a>Pesquisar</a>
+          </div>
 
+        </div>
+        <div className="Container-informations">    
+            {(filteredStates.map( (state) =>{     
+                    return (
+                      <div className="Search-information"  onClick={() => history.push(`/charts/${state.id}`) } key={state.id}>
+                        <span className="option">{state.name}</span>
+                      </div>
+                    )                                  
+                })             
+            )}
+        </div>  
       </div>
     );
     
