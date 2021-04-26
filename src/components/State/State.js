@@ -3,6 +3,7 @@ import axios from 'axios';
 import {useParams, useHistory} from 'react-router-dom';
 import './State.css';
 import Charts from '../Charts/Charts';
+import ChartsMonth from '../ChartsMonth/ChartsMonth';
 
 
 
@@ -32,7 +33,8 @@ const  State = () => {
               <p>{datas.datetime}</p>
             </div>
       </div>     
-      <Charts className="graph" initials={datas.initials}/>            
+      <Charts className="graph" initials={datas.initials}/>  
+      <ChartsMonth initials={datas.initials}/>          
       </div>
     )
 

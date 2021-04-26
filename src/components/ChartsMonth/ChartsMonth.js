@@ -26,11 +26,11 @@ const options = {
     },
   };
 
-const  Charts = ({initials}) => {
+const  ChartsMonth = ({initials}) => {
 
   const [datas, setData] = useState([]);
   useEffect(() => {
-      axios.get(`http://localhost:3000/by_dates/search/${initials}`)
+      axios.get(`http://localhost:3000/by_months/search/${initials}`)
       .then(res =>{
         setData(res.data);  
         console.log(res.data)
@@ -39,7 +39,7 @@ const  Charts = ({initials}) => {
   },[initials])
     
     return (
-      <div className="Charts">
+      <div className="ChartsMonth">
         <Line width="600px" height="300px" data={{
         labels: datas.map(element => element.datetime),
         datasets: [
@@ -68,4 +68,4 @@ const  Charts = ({initials}) => {
 
 }
 
-export default Charts;
+export default ChartsMonth;
