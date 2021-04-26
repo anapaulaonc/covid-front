@@ -42,7 +42,7 @@ const  Charts = ({initials}) => {
     
     return (
       <div className="Charts">
-        <Line data={{
+        <Line width="600px" height="300px" data={{
         labels: datas.map(element => element.datetime),
         datasets: [
             {
@@ -63,6 +63,7 @@ const  Charts = ({initials}) => {
             },
         ],
         }} options={options} />   
+
             
       </div>
     )

@@ -32,7 +32,7 @@ const  State = () => {
               <p>{datas.datetime}</p>
             </div>
       </div>     
-      <Charts initials={datas.initials}/>                 
+      <Charts className="graph" initials={datas.initials}/>            
       </div>
     )
 

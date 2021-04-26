@@ -1,6 +1,7 @@
 .State {
     display: flex;
     flex-wrap: wrap;
+    padding: 2rem;
 }
 .state-information {
     display: flex;
@@ -23,3 +24,6 @@
     text-align: right;
     
   }
+.graph{
+  margin: 2rem;
+}  
